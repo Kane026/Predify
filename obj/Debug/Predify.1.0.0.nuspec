@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Predify</id>
+    <version>1.0.0</version>
+    <authors>Predify</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net10.0">
+        <dependency id="Spectre.Console" version="0.55.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Kanef\source\repos\Predify\Predify\bin\Debug\net10.0\Predify.runtimeconfig.json" target="lib\net10.0\Predify.runtimeconfig.json" />
+    <file src="C:\Users\Kanef\source\repos\Predify\Predify\bin\Debug\net10.0\Predify.dll" target="lib\net10.0\Predify.dll" />
+  </files>
+</package>
