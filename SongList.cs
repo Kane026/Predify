@@ -16,18 +16,6 @@ namespace Predify
             "Never See Me Again - Kanye West - Hip Hop", "Mama's Boyfriend - Kanye West - Hip Hop", "Flashing Light - Kanye West - Hip Hop"
         };
 
-            var songlist = AnsiConsole.Prompt(
-            new SelectionPrompt<string>()
-            .Title("What song would you like to listen to")
-            .AddChoices(songs));
-
-            AnsiConsole.MarkupLine($"You selected: [green]{songlist}[/]");
-
-            if (songs.Contains(songlist))
-            {
-                var playSong = new PlaySong();
-                playSong.Play();
-            }
         }
     }
 }
