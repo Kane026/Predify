@@ -9,10 +9,14 @@ namespace Predify
         public String Title { get; set; }
         public String Artist { get; set; }
 
-            public Song(String title, String artist)
+        public String Genre { get; set; }
+
+            public Song(String title, String artist, String genre)
             {
                 Title = title;
                 Artist = artist;
+                Genre = genre;
+                
             }
 
        

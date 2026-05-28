@@ -13,7 +13,7 @@ namespace Predify
         {
             var songs = new[]
             {
-            "Never See Me Again - Kanye West", "Mama's Boyfriend - Kanye West", "Flashing Light - Kanye West"
+            "Never See Me Again - Kanye West - Hip Hop", "Mama's Boyfriend - Kanye West - Hip Hop", "Flashing Light - Kanye West - Hip Hop"
         };
 
             var songlist = AnsiConsole.Prompt(

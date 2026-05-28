@@ -11,16 +11,22 @@ namespace Predify
         public void Play()
         {
             AnsiConsole.Progress()
-            .Start(ctx =>
-            {
-                var playSong = ctx.AddTask("Playing song", maxValue: 100);
-
-                while (!ctx.IsFinished)
+                .Columns(
+                    new SpinnerColumn(),
+                    new TaskDescriptionColumn(),
+                    new ProgressBarColumn(),
+                    new ElapsedTimeColumn()
+                )
+                .Start(ctx =>
                 {
-                    playSong.Increment(1);
-                    Thread.Sleep(50);
-                }
-            });
+                    var playSong = ctx.AddTask("Playing song", maxValue: 1000);
+
+                    while (!ctx.IsFinished)
+                    {
+                        playSong.Increment(1);
+                        Thread.Sleep(50);
+                    }
+                });
 
 
                 AnsiConsole.MarkupLine("[green]The song has finished playing![/]");
