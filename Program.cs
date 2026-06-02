@@ -1,5 +1,4 @@
-﻿using Spectre.Console;
-using Predify;
+﻿using Predify;
 
 class Program
 {
@@ -20,11 +19,13 @@ class Program
         }
         else if (choice == "2")
         {
-            Console.WriteLine("Nummers gekozen");
+            var songList = new SongList();
+            songList.ShowSongs();
         }
         else if (choice == "3")
         {
             Console.WriteLine("Playlist gekozen");
+
         }
         else if (choice == "4")
         {
