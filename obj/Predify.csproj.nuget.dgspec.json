@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj": {}
+    "C:\\Users\\djgva\\source\\repos\\predify\\Predify.csproj": {}
   },
   "projects": {
-    "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj": {
+    "C:\\Users\\djgva\\source\\repos\\predify\\Predify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj",
+        "projectUniqueName": "C:\\Users\\djgva\\source\\repos\\predify\\Predify.csproj",
         "projectName": "Predify",
-        "projectPath": "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj",
+        "projectPath": "C:\\Users\\djgva\\source\\repos\\predify\\Predify.csproj",
         "packagesPath": "C:\\Users\\djgva\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\djgva\\source\\repos\\Predify\\obj\\",
         "projectStyle": "PackageReference",
