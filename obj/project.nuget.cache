@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "LhfAGaohDro=",
+  "dgSpecHash": "oDVZ6iC1fZE=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kanef\\source\\repos\\Predify\\Predify\\Predify.csproj",
+  "projectFilePath": "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Kanef\\.nuget\\packages\\spectre.console\\0.55.2\\spectre.console.0.55.2.nupkg.sha512",
-    "C:\\Users\\Kanef\\.nuget\\packages\\spectre.console.ansi\\0.55.2\\spectre.console.ansi.0.55.2.nupkg.sha512"
+    "C:\\Users\\djgva\\.nuget\\packages\\spectre.console\\0.55.2\\spectre.console.0.55.2.nupkg.sha512",
+    "C:\\Users\\djgva\\.nuget\\packages\\spectre.console.ansi\\0.55.2\\spectre.console.ansi.0.55.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kanef\\source\\repos\\Predify\\Predify\\Predify.csproj": {}
+    "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kanef\\source\\repos\\Predify\\Predify\\Predify.csproj": {
+    "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kanef\\source\\repos\\Predify\\Predify\\Predify.csproj",
+        "projectUniqueName": "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj",
         "projectName": "Predify",
-        "projectPath": "C:\\Users\\Kanef\\source\\repos\\Predify\\Predify\\Predify.csproj",
-        "packagesPath": "C:\\Users\\Kanef\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kanef\\source\\repos\\Predify\\Predify\\obj\\",
+        "projectPath": "C:\\Users\\djgva\\source\\repos\\Predify\\Predify.csproj",
+        "packagesPath": "C:\\Users\\djgva\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\djgva\\source\\repos\\Predify\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kanef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\djgva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
