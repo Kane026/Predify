@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Predify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< Updated upstream
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c231478ccf91392a5f1637a958590057008895ac")]
+=======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a16c08ee99b146322d189142a46e7dec89b9e33c")]
+>>>>>>> Stashed changes
 [assembly: System.Reflection.AssemblyProductAttribute("Predify")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Predify")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
