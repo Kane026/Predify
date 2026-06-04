@@ -1,28 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using Spectre.Console;
 
 namespace Predify
 {
     public class PlaySong
     {
-        public void Play()
+        // Check if the song is currently playing
+        public bool isPlaying = false;
+        // Check if the song is currently paused
+        public bool isPaused = false;
+        // Store the current song name
+        public string currentSong = "";
+
+        public void Play(string song)
         {
-            AnsiConsole.Progress()
-            .Start(ctx =>
-            {
-                var playSong = ctx.AddTask("Playing song", maxValue: 100);
-
-                while (!ctx.IsFinished)
-                {
-                    playSong.Increment(1);
-                    Thread.Sleep(50);
-                }
-            });
-
-
-                AnsiConsole.MarkupLine("[green]The song has finished playing![/]");
+            // Set the song as playing and store the song name
+            isPlaying = true;
+            isPaused = false;
+            currentSong = song;
+            Console.WriteLine("Now playing: " + currentSong);
         }
-    } }
+    }
+}

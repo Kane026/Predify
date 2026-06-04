@@ -1,9 +1,5 @@
-﻿using Spectre.Console;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Predify;
-using System.Xml.Serialization;
 
 namespace Predify
 {
@@ -11,23 +7,30 @@ namespace Predify
     {
         public void ShowSongs()
         {
-            var songs = new[]
+            // List of available songs
+            List<string> songs = new List<string>
             {
-            "Never See Me Again - Kanye West", "Mama's Boyfriend - Kanye West", "Flashing Light - Kanye West"
-        };
+                "Never See Me Again - Kanye West - Hip Hop",
+                "Mama's Boyfriend - Kanye West - Hip Hop",
+                "Flashing Light - Kanye West - Hip Hop"
+            };
 
-            var songlist = AnsiConsole.Prompt(
-            new SelectionPrompt<string>()
-            .Title("What song would you like to listen to")
-            .AddChoices(songs));
+            // Display all songs
+            Console.WriteLine("1. " + songs[0]);
+            Console.WriteLine("2. " + songs[1]);
+            Console.WriteLine("3. " + songs[2]);
 
-            AnsiConsole.MarkupLine($"You selected: [green]{songlist}[/]");
+            // Ask the user to pick a song
+            Console.WriteLine("Which song would you like to play:");
+            int choice = int.Parse(Console.ReadLine());
 
-            if (songs.Contains(songlist))
-            {
-                var playSong = new PlaySong();
-                playSong.Play();
-            }
+            // Play the selected song
+            PlaySong player = new PlaySong();
+            player.Play(songs[choice - 1]);
+
+            // Ask the user to stop or pause
+            MusicController control = new MusicController();
+            control.AskSong(player, songs);
         }
     }
 }
