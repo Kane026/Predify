@@ -1,24 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Predify
 {
     class Song
     {
-        public String Title { get; set; }
-        public String Artist { get; set; }
+        // Properties of a song
+        public string Title { get; set; }
+        public string Artist { get; set; }
+        public string Genre { get; set; }
 
-        public String Genre { get; set; }
-
-            public Song(String title, String artist, String genre)
-            {
-                Title = title;
-                Artist = artist;
-                Genre = genre;
-                
-            }
-
-       
+        // Constructor to create a song
+        public Song(string title, string artist, string genre)
+        {
+            Title = title;
+            Artist = artist;
+            Genre = genre;
+        }
     }
 }

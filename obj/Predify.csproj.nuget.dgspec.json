@@ -11,7 +11,7 @@
         "projectName": "Predify",
         "projectPath": "C:\\Users\\djgva\\source\\repos\\predify\\Predify.csproj",
         "packagesPath": "C:\\Users\\djgva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\djgva\\source\\repos\\Predify\\obj\\",
+        "outputPath": "C:\\Users\\djgva\\source\\repos\\predify\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

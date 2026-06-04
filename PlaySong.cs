@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading;
-using Spectre.Console;
 
 namespace Predify
 {
     public class PlaySong
     {
-        private bool isPlaying = false;
+        // Track if the song is currently playing
+        public bool isPlaying = false;
+        // Track if the song is currently paused
+        public bool isPaused = false;
+        // Store the current song name
+        public string currentSong = "";
 
         public void Play(string song)
         {
+            // Set the song as playing and store the song name
             isPlaying = true;
-            Console.WriteLine($"Now playing: {song}");
+            isPaused = false;
+            currentSong = song;
+            Console.WriteLine("Now playing: " + currentSong);
         }
     }
 }

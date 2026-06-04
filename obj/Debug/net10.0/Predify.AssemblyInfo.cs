@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Predify")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82514122f05da5802044823741e02cc0ab75d172")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0bb84c13852d6af52cc411cfb7c29918878d050")]
 [assembly: System.Reflection.AssemblyProductAttribute("Predify")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Predify")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
