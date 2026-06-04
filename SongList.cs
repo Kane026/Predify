@@ -1,41 +1,36 @@
-﻿using Spectre.Console;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using Predify;
-using System.Xml.Serialization;
-using System.Text.Json;
 
 namespace Predify
 {
     public class SongList
     {
-
-        int i = 0;  
         public void ShowSongs()
         {
+            // List of available songs
             List<string> songs = new List<string>
             {
-            "Never See Me Again - Kanye West - Hip Hop",
-            "Mama's Boyfriend - Kanye West - Hip Hop",
-            "Flashing Light - Kanye West - Hip Hop"
-        };
+                "Never See Me Again - Kanye West - Hip Hop",
+                "Mama's Boyfriend - Kanye West - Hip Hop",
+                "Flashing Light - Kanye West - Hip Hop"
+            };
 
-           
+            // Display all songs
+            Console.WriteLine("1. " + songs[0]);
+            Console.WriteLine("2. " + songs[1]);
+            Console.WriteLine("3. " + songs[2]);
 
-
-            foreach (var song in songs)
-            {
-                Console.WriteLine($"{i + 1}. {song}");
-                i++;
-            }
-            Console.WriteLine("Welk nummer wilt u kiezen:");
+            // Ask the user to pick a song
+            Console.WriteLine("Which song would you like to play:");
             int choice = int.Parse(Console.ReadLine());
 
-
+            // Play the selected song
             PlaySong player = new PlaySong();
             player.Play(songs[choice - 1]);
-        }
 
+            // Ask the user to stop or pause
+            MusicController control = new MusicController();
+            control.AskSong(player);
+        }
     }
 }

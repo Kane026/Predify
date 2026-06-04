@@ -1,11 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
-using Spectre.Console;
 
 namespace Predify
 {
-    public class PlaySong
+    public class StopSong
     {
-    } }
+        public void SongStop(PlaySong player)
+        {
+            // Set isPlaying to false and clear the current song
+            player.isPlaying = false;
+            player.currentSong = "";
+            Console.WriteLine("The song has stopped. No song is currently playing.");
+        }
+    }
+}
