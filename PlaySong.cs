@@ -4,9 +4,9 @@ namespace Predify
 {
     public class PlaySong
     {
-        // Track if the song is currently playing
+        // Check if the song is currently playing
         public bool isPlaying = false;
-        // Track if the song is currently paused
+        // Check if the song is currently paused
         public bool isPaused = false;
         // Store the current song name
         public string currentSong = "";

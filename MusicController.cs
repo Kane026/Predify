@@ -4,10 +4,10 @@ namespace Predify
 {
     public class MusicController
     {
-        public void AskSong(PlaySong player)
+        public void AskSong(PlaySong player, List<string> songs)
         {
             // Ask the user if they want to stop or pause the song
-            Console.WriteLine("Enter 's' to stop or 'p' to pause:");
+            Console.WriteLine("Enter 's' to stop, 'p' to pause, or 'o' to skip:");
             string input = Console.ReadLine();
 
             // If the user enters 's', stop the song
@@ -21,6 +21,10 @@ namespace Predify
             {
                 PauseSong pauser = new PauseSong();
                 pauser.SongPause(player);
+            }
+            else if (input == "o") { 
+                SkipSong skipper = new SkipSong();
+                skipper.Skip(player, songs);
             }
         }
     }
