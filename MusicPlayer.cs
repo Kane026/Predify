@@ -21,7 +21,7 @@ namespace Predify
             Console.WriteLine("Now playing: " + currentSong);
         }
 
-        public void SongStop()
+        public void Stop()
         {
             // Set isPlaying to false and clear the current song
             isPlaying = false;
@@ -53,7 +53,7 @@ namespace Predify
             }
         }
 
-        public void SongPause()
+        public void Pause()
         {
             // Pause the song and set isPaused to true
             isPlaying = false;
@@ -73,4 +73,4 @@ namespace Predify
             }
         }
     }
-}
+}   

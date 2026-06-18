@@ -30,7 +30,7 @@ namespace Predify
 
             // Ask the user to stop or pause
             MusicController control = new MusicController();
-            control.AskSong(player, songs);
+            control.AskSong(player);
         }
     }
 }

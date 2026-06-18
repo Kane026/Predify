@@ -28,7 +28,8 @@ class Program
         }
         else if (choice == "3")
         {
-            Console.WriteLine("Playlist gekozen");
+            Playlist playlist = new Playlist("");
+            playlist.CreatePlaylist();
         }
         else if (choice == "4")
         {
