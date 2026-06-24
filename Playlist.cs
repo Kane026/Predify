@@ -27,7 +27,7 @@ namespace Predify
         }
 
         // Toon een menu om een nummer te kiezen en toe te voegen
-        public void AddSong()
+        public void AddSongMenu()
         {
             // Beschikbare nummers
             List<string> availableSongs = new List<string>
@@ -49,5 +49,21 @@ namespace Predify
             Songs.Add(availableSongs[choice - 1]);
             Console.WriteLine("Nummer toegevoegd aan playlist '" + Name + "'.");
         }
+
+        // Toon alle nummers in de playlist
+        public void ViewPlaylist()
+        {
+            if (Songs.Count == 0)
+            {
+                Console.WriteLine("De playlist '" + Name + "' is leeg.");
+                return;
+            }
+
+            Console.WriteLine("Nummers in playlist '" + Name + "':");
+            for (int i = 0; i < Songs.Count; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + Songs[i]);
+            }
+        }
     }
-}
+}   
