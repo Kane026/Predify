@@ -65,5 +65,28 @@ namespace Predify
                 Console.WriteLine((i + 1) + ". " + Songs[i]);
             }
         }
+
+        // Verwijder een nummer uit de playlist
+        public void RemoveSong()
+        {
+            if (Songs.Count == 0)
+            {
+                Console.WriteLine("De playlist is leeg, er zijn geen nummers om te verwijderen.");
+                return;
+            }
+
+            // Toon alle nummers in de playlist
+            Console.WriteLine("Kies een nummer om te verwijderen:");
+            for (int i = 0; i < Songs.Count; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + Songs[i]);
+            }
+
+            // Verwijder het gekozen nummer
+            int choice = int.Parse(Console.ReadLine()) - 1;
+            string removed = Songs[choice];
+            Songs.RemoveAt(choice);
+            Console.WriteLine("'" + removed + "' verwijderd uit de playlist.");
+        }
     }
-}   
+}

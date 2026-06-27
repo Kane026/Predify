@@ -9,8 +9,9 @@ while (true)
     Console.WriteLine("2. Playlist aanmaken");
     Console.WriteLine("3. Nummer toevoegen aan playlist");
     Console.WriteLine("4. Playlist inkijken");
-    Console.WriteLine("5. Albums");
-    Console.WriteLine("6. Afsluiten");
+    Console.WriteLine("5. Nummer verwijderen uit playlist");
+    Console.WriteLine("6. Albums");
+    Console.WriteLine("7. Afsluiten");
 
     // Ask the user to make a choice
     Console.Write("Maak een keuze: ");
@@ -43,10 +44,16 @@ while (true)
     }
     else if (choice == "5")
     {
-        Console.WriteLine("Albums gekozen");
+        // Verwijder een nummer uit de playlist
+        playlist.RemoveSong();
         Console.WriteLine();
     }
     else if (choice == "6")
+    {
+        Console.WriteLine("Albums gekozen");
+        Console.WriteLine();
+    }
+    else if (choice == "7")
     {
         Console.WriteLine("Afsluiten gekozen");
         break;
