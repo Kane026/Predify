@@ -6,6 +6,8 @@ class Program
     {
         bool running = true;
 
+        Users users = new Users();
+
         while (running)
         {
             // Display the main menu
@@ -13,7 +15,11 @@ class Program
             Console.WriteLine("2. Nummers");
             Console.WriteLine("3. Playlist");
             Console.WriteLine("4. Albums");
-            Console.WriteLine("5. Afsluiten");
+            Console.WriteLine("5. Users");
+            Console.WriteLine("6. Add Friend");
+            Console.WriteLine("7. Remove Friend");
+            Console.WriteLine("8. Friends");
+            Console.WriteLine("9. Afsluiten");
 
             // Ask the user to make a choice
             Console.Write("Maak een keuze: ");
@@ -42,11 +48,28 @@ class Program
             }
             else if (choice == "5")
             {
+                users.ShowUsers();
+            }
+            else if (choice == "6")
+            {
+                users.AddFriend();
+            }
+            else if (choice == "7")
+            {
+
+                users.RemoveFriend();
+            }
+            else if (choice == "8")
+            {
+                users.ShowFriends();
+            }
+            else if (choice == "9")
+            {
                 Console.WriteLine("Afsluiten gekozen");
+                running = false;
             }
             else
             {
-                // Invalid choice
                 Console.WriteLine("Geen geldige keuze");
             }
         }
