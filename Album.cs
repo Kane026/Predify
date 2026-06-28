@@ -63,7 +63,18 @@ namespace Predify
 
         private void ShowSongsFromAlbum(string albumNaam)
         {
-            List<Song> nummers = albumSongs[albumNaam];
+            List<Song> nummers = new List<Song>(albumSongs[albumNaam]);
+
+            Console.WriteLine("Shufflen? (ja/nee)");
+            string shuffleInput = Console.ReadLine();
+
+            if (shuffleInput?.ToLower() == "ja")
+            {
+                Random random = new Random();
+                List<Song> shuffled = nummers.OrderBy(nummer => random.Next()).ToList();
+                Console.WriteLine("je nummers zijn nu shuffled!");
+
+            }
 
             for (int i = 0; i < nummers.Count; i++)
             {
