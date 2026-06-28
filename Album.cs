@@ -5,6 +5,7 @@ namespace Predify
 {
     public class Album
     {
+        // Dictionary of albums with their songs
         private Dictionary<string, List<Song>> albumSongs = new Dictionary<string, List<Song>>
         {
             {
@@ -37,6 +38,7 @@ namespace Predify
             }
         };
 
+        // Show all available albums and let the user pick one
         public void ShowAlbums()
         {
             List<string> albums = new List<string>(albumSongs.Keys);
@@ -47,9 +49,11 @@ namespace Predify
                 Console.WriteLine($"{i + 1}. {albums[i]}");
             }
 
+            // Ask the user to pick an album
             Console.Write("\nKies een album: ");
             string input = Console.ReadLine();
 
+            // Check if the choice is valid
             if (int.TryParse(input, out int keuze) && keuze >= 1 && keuze <= albums.Count)
             {
                 string gekozenAlbum = albums[keuze - 1];
@@ -61,33 +65,38 @@ namespace Predify
             }
         }
 
+        // Show all songs from the selected album and let the user pick one
         private void ShowSongsFromAlbum(string albumNaam)
         {
             List<Song> nummers = new List<Song>(albumSongs[albumNaam]);
 
+            // Ask the user if they want to shuffle the songs
             Console.WriteLine("Shufflen? (ja/nee)");
             string shuffleInput = Console.ReadLine();
 
+            // Shuffle the songs if the user wants to
             if (shuffleInput?.ToLower() == "ja")
             {
                 Random random = new Random();
                 List<Song> shuffled = nummers.OrderBy(nummer => random.Next()).ToList();
                 Console.WriteLine("je nummers zijn nu shuffled!");
-
             }
 
+            // Display all songs
             for (int i = 0; i < nummers.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {nummers[i].Title}");
             }
 
+            // Ask the user to pick a song
             Console.Write("\nKies een nummer om af te spelen: ");
             string input = Console.ReadLine();
 
+            // Play the selected song
             if (int.TryParse(input, out int keuze) && keuze >= 1 && keuze <= nummers.Count)
             {
                 Song gekozen = nummers[keuze - 1];
-                Console.WriteLine($"\n Nu speelt: {gekozen.Title} - {gekozen.Artist}");
+                Console.WriteLine($"\nNu speelt: {gekozen.Title} - {gekozen.Artist}");
             }
             else
             {

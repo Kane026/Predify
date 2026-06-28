@@ -6,6 +6,7 @@ namespace Predify
 {
     public class Users
     {
+        // List of available users
         List<string> users = new List<string>
         {
             "Dylan",
@@ -13,8 +14,10 @@ namespace Predify
             "Emile"
         };
 
+        // List of friends
         List<string> friends = new List<string>();
 
+        // Show all users
         public void ShowUsers()
         {
             Console.WriteLine("Gebruikers:");
@@ -22,12 +25,16 @@ namespace Predify
                 Console.WriteLine($"{i + 1}. {users[i]}\n");
         }
 
+        // Add a user as a friend
         public void AddFriend()
         {
             Console.WriteLine("Voeg vriend toe:");
             for (int i = 0; i < users.Count; i++)
                 Console.WriteLine($"{i + 1}. {users[i]}");
+
             string friendName = Console.ReadLine();
+
+            // Check if the choice is valid
             if (int.TryParse(friendName, out int keuze) && keuze >= 1 && keuze <= users.Count)
             {
                 string vriend = users[keuze - 1];
@@ -39,13 +46,17 @@ namespace Predify
                 Console.WriteLine("Ongeldige keuze.");
             }
         }
-        
 
-        public void RemoveFriend() {
-            Console.WriteLine("Voeg vriend toe:");
+        // Remove a friend from the friends list
+        public void RemoveFriend()
+        {
+            Console.WriteLine("Verwijder vriend:");
             for (int i = 0; i < friends.Count; i++)
                 Console.WriteLine($"{i + 1}. {friends[i]}");
+
             string friendName = Console.ReadLine();
+
+            // Check if the choice is valid
             if (int.TryParse(friendName, out int keuze) && keuze >= 1 && keuze <= friends.Count)
             {
                 string vriend = friends[keuze - 1];
@@ -58,7 +69,9 @@ namespace Predify
             }
         }
 
-        public void ShowFriends() {
+        // Show all friends
+        public void ShowFriends()
+        {
             Console.WriteLine("\nVrienden:");
             for (int i = 0; i < friends.Count; i++)
                 Console.WriteLine($"{i + 1}. {friends[i]}\n");
