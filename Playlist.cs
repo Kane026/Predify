@@ -5,23 +5,88 @@ namespace Predify
 {
     public class Playlist
     {
+        // Naam van de playlist
         public string Name { get; set; }
+        // Lijst van nummers in de playlist
         public List<string> Songs { get; set; }
 
+        // Constructor om een playlist aan te maken met een naam
         public Playlist(string name)
         {
             Name = name;
             Songs = new List<string>();
         }
 
+        // Vraag de gebruiker om een naam en maak de playlist aan
         public void CreatePlaylist()
         {
             Console.Write("Geef de naam van de playlist: ");
             string name = Console.ReadLine();
             Name = name;
             Console.WriteLine("Playlist '" + Name + "' aangemaakt.");
-            Console.WriteLine("Druk op Enter om terug te gaan.");
-            Console.ReadLine();
+        }
+
+        // Toon een menu om een nummer te kiezen en toe te voegen
+        public void AddSongMenu()
+        {
+            // Beschikbare nummers
+            List<string> availableSongs = new List<string>
+            {
+                "Never See Me Again - Kanye West - Hip Hop",
+                "Mama's Boyfriend - Kanye West - Hip Hop",
+                "Flashing Light - Kanye West - Hip Hop"
+            };
+
+            // Toon de beschikbare nummers
+            Console.WriteLine("Kies een nummer om toe te voegen:");
+            for (int i = 0; i < availableSongs.Count; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + availableSongs[i]);
+            }
+
+            // Voeg het gekozen nummer toe aan de playlist
+            int choice = int.Parse(Console.ReadLine());
+            Songs.Add(availableSongs[choice - 1]);
+            Console.WriteLine("Nummer toegevoegd aan playlist '" + Name + "'.");
+        }
+
+        // Toon alle nummers in de playlist
+        public void ViewPlaylist()
+        {
+            if (Songs.Count == 0)
+            {
+                Console.WriteLine("De playlist '" + Name + "' is leeg.");
+                return;
+            }
+
+            Console.WriteLine("Nummers in playlist '" + Name + "':");
+            for (int i = 0; i < Songs.Count; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + Songs[i]);
+            }
+        }
+
+        // Verwijder een nummer uit de playlist
+        public void RemoveSong()
+        {
+            if (Songs.Count == 0)
+            {
+                Console.WriteLine("De playlist is leeg, er zijn geen nummers om te verwijderen.");
+                return;
+            }
+
+            // Toon alle nummers in de playlist
+            Console.WriteLine("Kies een nummer om te verwijderen:");
+            for (int i = 0; i < Songs.Count; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + Songs[i]);
+            }
+
+            // Verwijder het gekozen nummer
+            int choice = int.Parse(Console.ReadLine()) - 1;
+            string removed = Songs[choice];
+            Songs.RemoveAt(choice);
+            Console.WriteLine("'" + removed + "' verwijderd uit de playlist.");
         }
     }
 }
