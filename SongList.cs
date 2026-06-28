@@ -25,12 +25,12 @@ namespace Predify
             int choice = int.Parse(Console.ReadLine());
 
             // Play the selected song
-            PlaySong player = new PlaySong();
+            MusicPlayer player = new MusicPlayer();
             player.Play(songs[choice - 1]);
 
             // Ask the user to stop or pause
             MusicController control = new MusicController();
-            control.AskSong(player, songs);
+            control.AskSong(player);
         }
     }
 }
